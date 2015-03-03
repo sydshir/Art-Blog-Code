@@ -1,4 +1,29 @@
 
+h1, h3, p, li{
+	font-family:Verdana;
+	color:#535353
+}
+h1{
+	text-align:center;
+	font-size:40px;
+	padding:6px;
+}
+#header{
+	border:2px solid #b8b8b8;
+	border-width: 2px 0px 2px 0px;
+
+}
+ul{
+text-align:center;
+}
+li{
+	display: inline;
+	padding: 40px;
+}
+.elements{
+	margin:20px;
+	padding:10px;
+}
 img{
 	width: 100%;
 	max-width:600px;
@@ -10,17 +35,13 @@ img{
 p, h3{
 	width:100%;
 	max-width:600px;
-	font-family:Helvetica;
 	display:block;
 	margin-left:auto;
 	margin-right:auto;
 }
-div{
-	border-width:2px;
-	border-color:black;
+h3{
+	font-weight:lighter;
 }
-h1{
-	text-align:center;
-	font-family:Helvetica;
-	font-size:40px;
+p{
+	font-size:14px;
 }
