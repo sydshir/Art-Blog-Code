@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html>
+<head>
+			<link href='http://fonts.googleapis.com/css?family=Nothing+You+Could+Do' rel='stylesheet' type='text/css'>
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+	<title>Gallery</title>
+</head>
+<body>
+	
+	<a href="index.html" ><img id="logo" src="logo.jpg">
+	<div id="header">
+		<ul>
+			<li><a href="index.html">BLOG</a></li>
+			<li><a href="gallery.html">GALLERY</a></li>
+			<li><a href="https://instagram.com/spiritandpencils/">INSTAGRAM </a></li>
+			<li><a href="about.html">ABOUT</a></li>
+		</ul>
+	</div>
+	<div id="elements">
+			
+			<img class="img" id="dress"class="imgtop"src="artPhotos/cropped/dresscrop.jpg">
+			<img class="img" id="face"class="imgtop"src="artPhotos/cropped/facecrop.jpg">
+			<img class="img" id="plant" class="imgtop"src="artPhotos/cropped/plantcrop.jpg">
+			<img class="img" id="moon"  src="artPhotos/cropped/mooncrop.jpg">	
+
+	</div>
+	<div id="lightbox"></div>
+	<style>
+	h1, h3, p, li, h6{
+	font-family:'Source Sans Pro', Verdana;
+	color:#787a79
+}
+#logo{
+	display:block;
+	margin-left:auto;
+	margin-right:auto;
+	width:450px;
+	padding:0px;
+}
+
+#header{
+	border:1px solid #e4dfdc;
+	border-width: 2px 0px 2px 0px;
+
+}
+ul{
+text-align:center;
+}
+li{
+	display: inline;
+	padding: 40px;
+	font-size:13px;
+	letter-spacing:2px;
+}
+a{
+	text-decoration:none;
+	color:#787a79;
+}
+#elements{
+	margin-left:auto;
+	margin-right:auto;
+	margin-top:20px;
+	width:92%;
+}
+.img{
+	width:32.3%;
+	display:inline;
+	margin:.3%;
+}
+#lightbox{
+		background-color:#1d1c1c;
+		position:fixed;
+		top:0px;
+		left:0px;
+		right:0px;
+}
+.imgadded{
+		height:640px;
+		z-index:888;
+		margin-left:auto;
+		margin-right:auto;
+		margin-top:20px;
+		display:block;
+
+	}
+	</style>
+	<script>
+var w = window.innerWidth
+|| document.documentElement.clientWidth
+|| document.body.clientWidth;
+var h = window.innerHeight
+|| document.documentElement.clientHeight
+||document.body.clientHeight;
+
+
+$("#dress").click(function(){
+	$('#lightbox').animate({
+		height:h,
+		width:w,
+	})
+	$("#lightbox").html("<img class='imgadded' src='artPhotos/dress.jpg'>");
+	$('#lightbox').click(function(){
+		$('#lightbox').css({
+			height:"0px",
+			width:"0px"
+		});
+		$(".imgadded").remove();
+	});
+});
+	$("#face").click(function(){
+		$('#lightbox').animate({
+			height:h,
+			width:w,
+		})
+	$("#lightbox").html("<img class='imgadded' src='artPhotos/face.jpg'>");
+	$('#lightbox').click(function(){
+		$('#lightbox').css({
+			height:"0px",
+			width:"0px"
+		});
+		$(".imgadded").remove();
+	});
+});
+
+$("#plant").click(function(){
+	$('#lightbox').animate({
+		height:h,
+		width:w,
+	});
+	$("#lightbox").html("<img class='imgadded' src='artPhotos/plant.jpg'>");
+	$('#lightbox').click(function(){
+		$('#lightbox').css({
+			height:"0px",
+			width:"0px"
+		});
+		$(".imgadded").remove();
+	});
+});
+$("#moon").click(function(){
+	$('#lightbox').animate({
+		height:h,
+		width:w,
+	})
+	$("#lightbox").html("<img class='imgadded' src='artPhotos/moon.jpg'>");
+	$('#lightbox').click(function(){
+		$('#lightbox').css({
+			height:"0px",
+			width:"0px"
+		});
+		$(".imgadded").remove();
+	});
+});
+	</script>
+</body>
+</html>
